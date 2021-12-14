@@ -40,7 +40,7 @@ jobs:
         id: start
         run: |
           SCAN_ID=$(nexploit-cli scan:run                                                 \
-            --test csrf dom_xss header_security secret_tokens open_buckets                 \
+            --test csrf dom_xss                 \
             --name "🥤 Juice-Shop for a '${GITHUB_REF##*/}' branch #${GITHUB_RUN_NUMBER}" \
             --crawler http://brokencrystals.local:3000  \
             --repeater ${{ secrets.REPEATER }}                                            \
